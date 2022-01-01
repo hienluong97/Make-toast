@@ -1,0 +1,146 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  height: 500px;
+  font-family: "Helvetica Neue";
+  background-color: #f4f4f5; 
+  display: flex;
+  justify-content:space-around;
+  align-items: center; 
+  flex-direction: column;  
+
+} 
+
+
+.btn {
+    display: inline-block;
+    min-width: 100px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+    color: white;
+    font-size: 18px;
+}
+
+
+.btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.btn--success {
+   background-color: yellowgreen;
+}
+
+.btn--warning {
+    background-color: gold;
+}
+
+.btn--error {
+    
+    background-color: orangered;
+}
+
+
+
+.toast {
+    display:flex;
+    align-items: center;
+    border-left: 6px solid;
+    border-radius: 10px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.08);
+    padding: 10px 0px;
+    background-color: white;
+    min-width: 400px;
+}
+
+#toast {
+   position:fixed;
+   right: 32px;
+   top: 20px;
+   z-index: 999999;
+}
+
+@keyframes slideInleft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast + .toast {
+    margin-top: 24px;
+  }
+
+.toast__icon,
+.toast__close {
+    padding: 0px 20px;     
+}
+
+.toast__icon{
+    font-size: 18px;    
+    font-weight: bolder;
+}
+
+.toast__body {
+    flex-grow: 1 ;    
+}
+
+.toast__title {
+    font-size: 24px;         
+}
+
+.toast__msg {
+    font-size: 16px;
+    color: dimgray;
+}
+.toast__close {
+    font-size: 16px;
+}
+
+.toast__close:hover {
+    cursor: pointer;
+}
+
+.toast--success {   
+    border-left: 6px solid yellowgreen;
+      
+}
+
+.toast--warning {
+    border-left: 6px solid gold;
+}
+
+.toast--error {
+    border-left: 6px solid orangered;
+}
+
+
+.toast--success .toast__icon {   
+    color: yellowgreen;
+      
+}
+
+.toast--warning .toast__icon {   
+    color: gold;
+}
+
+.toast--error .toast__icon {   
+    color: orangered;
+}
